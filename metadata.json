@@ -1,0 +1,6 @@
+{
+  "name": "GITC 가족캠프 준비물 체크리스트",
+  "description": "GITC 가족캠프 출국 전 준비물을 학부모님이 모바일에서 쉽게 체크할 수 있는 체크리스트 웹앱",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
