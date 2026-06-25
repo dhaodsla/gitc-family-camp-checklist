@@ -40,7 +40,7 @@ const CHECKLIST_DATA: ChecklistItem[] = [
   // 0. 출국 전 eTravel 등록
   { id: 'etravel_official_site', category: '출국 전 eTravel 등록', name: 'eTravel 공식 사이트 접속', required: true, tip: '반드시 공식 사이트(etravel.gov.ph)에서 진행하세요 (무료).' },
   { id: 'etravel_parent_registration', category: '출국 전 eTravel 등록', name: '학부모 eTravel 등록 완료', required: true, tip: '학부모 본인의 정보를 기재하고 최종 등록을 마칩니다.' },
-  { id: 'etravel_child_registration', category: '출국 전 eTravel 등록', name: '아이 eTravel 등록 완료', required: true, tip: '가족캠프 참가 동행 자녀의 등록을 별도로 새로 진행해 주세요.' },
+  { id: 'etravel_child_registration', category: '출국 전 eTravel 등록', name: '아이 eTravel 등록 완료', required: true, tip: '캠프 참가 자녀의 등록을 별도로 새로 진행해 주세요.' },
   { id: 'etravel_parent_qr_save', category: '출국 전 eTravel 등록', name: '학부모 QR코드 캡처 / 저장', required: true, tip: '발급 완료 후 생성된 QR코드를 휴대폰 사진첩에 캡처해 둡니다.' },
   { id: 'etravel_child_qr_save', category: '출국 전 eTravel 등록', name: '아이 QR코드 캡처 / 저장', required: true, tip: '자녀용으로 발급된 개별 QR코드를 각각 별도로 캡처해 둡니다.' },
   { id: 'etravel_confirm_flight', category: '출국 전 eTravel 등록', name: '항공편명 확인', required: true, tip: '이용하시는 항공편 스케줄 및 정확한 비행기 편명을 기재해야 합니다.' },
@@ -319,7 +319,7 @@ export default function App() {
   };
 
   const handleShareProgress = () => {
-    const textReport = `[GITC 가족캠프 출국 준비 현황 ✈️]
+    const textReport = `[GITC 영어캠프 출국 준비 현황 ✈️]
 ━━━━━━━━━━━━━━━━━━━━
 📌 전체 진행률: ${stats.progressPercentage}% (${stats.completedAll}/${stats.totalAll} 완료)
 
@@ -357,7 +357,7 @@ ${categoriesList.map(cat => {
         <div className="max-w-lg mx-auto relative">
           <div className="flex items-center justify-between mb-4">
             <span className="bg-blue-600/30 text-blue-300 text-xs font-semibold px-3 py-1 rounded-full border border-blue-500/20 tracking-wider">
-              GITC FAMILY CAMP
+              GITC ENGLISH CAMP
             </span>
             
             {/* Auto save status indicator */}
@@ -368,7 +368,7 @@ ${categoriesList.map(cat => {
           </div>
 
           <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white mb-2">
-            GITC 가족캠프 준비물 체크리스트
+            GITC 영어캠프 준비물 체크리스트
           </h1>
           <p className="text-sm md:text-base text-slate-300 leading-relaxed font-light">
             출국 전 학부모님께서 하나씩 꼼꼼하게 체크해 주세요. 🎒✈️
@@ -558,16 +558,16 @@ ${categoriesList.map(cat => {
                 className="space-y-4 text-xs md:text-sm text-sky-950 leading-relaxed overflow-hidden"
               >
                 <p className="text-sky-900 leading-relaxed bg-white/60 p-3 rounded-2xl border border-sky-100/50">
-                  eTravel은 필리핀 입국 전 등록해야 하는 온라인 입국 신고 시스템입니다. 비행기 출발시간 기준 <strong>72시간 전</strong>부터 등록해 주세요.
+                  eTravel은 필리핀 입국 전 등록해야 하는 온라인 입국 신고 시스템입니다. 비행기 출발시간 기준 <strong>72시간 전</strong>부터 등록해 주세요. 가족/주니어 영어캠프는 참가 인원 전원이 개별적으로 등록해야 합니다.
                 </p>
 
                 {/* ⭐️ 학부모와 아이 각각 등록 강조 */}
                 <div className="bg-amber-50 border border-amber-200/70 rounded-2xl p-3.5 flex gap-2.5 shadow-xs">
                   <div className="text-amber-600 shrink-0 mt-0.5 font-bold">⚠️</div>
                   <div>
-                    <strong className="text-amber-950 font-bold block mb-0.5">학부모와 자녀 각각 개별 등록 필수!</strong>
+                    <strong className="text-amber-950 font-bold block mb-0.5">참가 동행인원 각각 개별 등록 필수!</strong>
                     <p className="text-amber-900 font-medium leading-relaxed">
-                      가족캠프는 학부모님과 자녀가 <span className="underline decoration-2 decoration-amber-500 font-extrabold text-amber-950">각각 따로 등록</span>해야 하며, 등록 완료 후 발급되는 QR코드도 <span className="font-extrabold text-amber-950">각각 개별적으로 저장</span>해야 합니다. (예: 학부모 1명 + 아이 1명 = 총 2개의 QR코드 필요)
+                      영어캠프는 참가하는 학부모님과 자녀가 <span className="underline decoration-2 decoration-amber-500 font-extrabold text-amber-950">각각 따로 등록</span>해야 하며, 등록 완료 후 발급되는 QR코드도 <span className="font-extrabold text-amber-950">각각 개별적으로 저장</span>해야 합니다. (예: 학부모 1명 + 아이 1명 = 총 2개의 QR코드 필요 / 주니어 단독 참가 시에도 개별 등록 필요)
                     </p>
                   </div>
                 </div>
@@ -623,7 +623,7 @@ ${categoriesList.map(cat => {
                       <li className="flex items-start gap-1"><span className="text-sky-500 font-bold shrink-0">5.</span> <span>필리핀 체류 주소 정보를 입력합니다.</span></li>
                       <li className="flex items-start gap-1"><span className="text-sky-500 font-bold shrink-0">6.</span> <span>건강 관련 질문에 신중히 답변합니다.</span></li>
                       <li className="flex items-start gap-1"><span className="text-sky-500 font-bold shrink-0">7.</span> <span>등록 완료 후 화면에 나오는 QR코드를 캡처 또는 다운로드합니다.</span></li>
-                      <li className="flex items-start gap-1"><span className="text-sky-500 font-bold shrink-0">8.</span> <span>학부모와 아이 각각의 QR코드가 발급되었는지 최종 확인합니다.</span></li>
+                      <li className="flex items-start gap-1"><span className="text-sky-500 font-bold shrink-0">8.</span> <span>참가자 전원(학부모 및 아이)의 개별 QR코드가 정상 발급되었는지 확인합니다.</span></li>
                     </ul>
                   </div>
                 </div>
@@ -896,8 +896,8 @@ ${categoriesList.map(cat => {
 
       {/* Footer Branding */}
       <footer className="py-6 text-center border-t border-slate-200 bg-white mt-auto text-slate-400 text-[11px]" id="page_footer">
-        <p>© GITC Family Camp Checklist. All rights reserved.</p>
-        <p className="mt-1 font-mono text-[10px]">v1.2.0 • Local Storage Persistence</p>
+        <p>© GITC English Camp Checklist. All rights reserved.</p>
+        <p className="mt-1 font-mono text-[10px]">v1.3.0 • Local Storage Persistence</p>
       </footer>
 
       {/* --- In-App Custom Overlay Toast Notification --- */}
